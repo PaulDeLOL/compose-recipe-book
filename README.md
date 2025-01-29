@@ -1,26 +1,5 @@
-Affirmations App - Starter Code
+Recipe Book App - Pablo Guardia
 ================================
 
-Starter code for the Android Basics with Compose: Affirmations app.
-
-
-Introduction
-------------
-The Affirmations app contains a scrollable list of 10 cards.
-
-
-Pre-requisites
---------------
-* Familiarity with Lists in Kotlin
-* Experience building layouts with Jetpack Compose
-* Experience running apps on a device or emulator
-
-
-Getting Started
----------------
-1. Install Android Studio, if you don't already have it.
-2. Download the sample.
-3. Import the sample into Android Studio.
-4. Build and run the sample.
-
-All photos by Romain Guy. All photos are licensed under CC0 https://creativecommons.org/share-your-work/public-domain/cc0/
+Recipe Book App created for Assignment 3 of COP4656 - Mobile Programming.
+The app's source code was taken from the Affirmations app codelab in the Android Basics with Compose course. Code was started from the starter branch, and once the affirmations app was complete, the images and the text were changed to show foods. A scrollable list of 10 foods should be shown upon starting the app.
