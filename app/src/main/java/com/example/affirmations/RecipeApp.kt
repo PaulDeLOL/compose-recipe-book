@@ -26,8 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.affirmations.ui.theme.AffirmationsTheme
-import com.example.affirmations.model.Affirmation
+import com.example.affirmations.ui.theme.RecipeBookTheme
+import com.example.affirmations.model.Recipe
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -39,13 +39,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AffirmationsTheme {
+            RecipeBookTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AffirmationsApp()
+                    RecipeBookApp()
                 }
             }
         }
@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun AffirmationsApp() {
+fun RecipeBookApp() {
     val layoutDirection = LocalLayoutDirection.current
     Surface(
         modifier = Modifier
@@ -66,26 +66,26 @@ fun AffirmationsApp() {
                     .calculateEndPadding(layoutDirection),
             ),
     ) {
-        AffirmationList(
-            affirmationList = Datasource().loadAffirmations(),
+        RecipeList(
+            recipeList = Datasource().loadRecipes(),
         )
     }
 }
 
 @Composable
-fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
+fun RecipeCard(recipe: Recipe, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Column {
             Image(
-                painter = painterResource(affirmation.imageResourceId),
-                contentDescription = stringResource(affirmation.stringResourceId),
+                painter = painterResource(recipe.imageResourceId),
+                contentDescription = stringResource(recipe.stringResourceId),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(194.dp),
                 contentScale = ContentScale.Crop
             )
             Text(
-                text = LocalContext.current.getString(affirmation.stringResourceId),
+                text = LocalContext.current.getString(recipe.stringResourceId),
                 modifier = Modifier.padding(16.dp),
                 style = MaterialTheme.typography.headlineSmall
             )
@@ -94,11 +94,11 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
+fun RecipeList(recipeList: List<Recipe>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
-        items(affirmationList) { affirmation ->
-            AffirmationCard(
-                affirmation = affirmation,
+        items(recipeList) { recipe ->
+            RecipeCard(
+                recipe = recipe,
                 modifier = Modifier.padding(8.dp)
             )
         }
@@ -107,6 +107,6 @@ fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Mod
 
 @Preview
 @Composable
-private fun AffirmationCardPreview() {
-    AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.image1))
+private fun RecipeCardPreview() {
+    RecipeCard(Recipe(R.string.recipe1, R.drawable.image1))
 }

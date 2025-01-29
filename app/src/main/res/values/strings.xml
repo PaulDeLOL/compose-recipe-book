@@ -15,14 +15,14 @@
   -->
 <resources>
     <string name="app_name">Recipes!</string>
-    <string name="affirmation1">Candy apples</string>
-    <string name="affirmation2">Cheese Risotto</string>
-    <string name="affirmation3">Parfait</string>
-    <string name="affirmation4">Lasagna</string>
-    <string name="affirmation5">Minestrone</string>
-    <string name="affirmation6">Salisbury Steak</string>
-    <string name="affirmation7">Chop Suey</string>
-    <string name="affirmation8">Dorayaki</string>
-    <string name="affirmation9">French Crullers</string>
-    <string name="affirmation10">Chili Con Carne</string>
+    <string name="recipe1">Candy apples</string>
+    <string name="recipe2">Cheese Risotto</string>
+    <string name="recipe3">Parfait</string>
+    <string name="recipe4">Lasagna</string>
+    <string name="recipe5">Minestrone</string>
+    <string name="recipe6">Salisbury Steak</string>
+    <string name="recipe7">Chop Suey</string>
+    <string name="recipe8">Dorayaki</string>
+    <string name="recipe9">French Crullers</string>
+    <string name="recipe10">Chili Con Carne</string>
 </resources>

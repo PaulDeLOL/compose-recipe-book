@@ -43,7 +43,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun AffirmationsTheme(
+fun RecipeBookTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+, turned off for training purposes
     dynamicColor: Boolean = false,
